@@ -41,7 +41,7 @@ def get_power_stats_today_min(request):
         f"https://www.elprisetjustnu.se/api/v1/prices/{today}_SE4.json"
     ).json()
 
-    min_price = min(item["SEK_per_kWh"] for item in res)
+    min_price = round(min(item["SEK_per_kWh"] for item in res), 2)
 
     return JsonResponse(
         {"min_price": min_price},

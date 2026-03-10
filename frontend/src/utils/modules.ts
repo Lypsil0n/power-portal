@@ -8,4 +8,14 @@ async function getPowerStatsTodayAvg() {
     return data;
 }
 
-export { getPowerStatsTodayAvg };
+async function getPowerStatsTodayMin() {
+    const response = await fetch(
+        "http://localhost:8000/api/get_power_stats_today_min",
+    );
+
+    const data = await response.json();
+
+    return data;
+}
+
+export { getPowerStatsTodayAvg, getPowerStatsTodayMin };
