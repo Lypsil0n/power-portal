@@ -1,6 +1,4 @@
-import reactLogo from "./assets/react.svg";
 import { useState, useEffect } from "react";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import { getPowerStatsTodayAvg } from "./utils/modules";
 
